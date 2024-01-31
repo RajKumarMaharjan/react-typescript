@@ -1,3 +1,4 @@
+import {useState} from "react"
 import { UseShoppingChart } from "../context/shoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 
@@ -12,6 +13,13 @@ type StoreItemProps = {
 export function StoreItem({id, name, price, imgUrl }: StoreItemProps) {
     const {getItemQuanity, increaseCartQuanity, decreaseCartQuanity, removeFromCart} = UseShoppingChart()
     const quantity = getItemQuanity(id)
+
+    const [, forceUpdate] = useState({});
+
+    const handleAddToCart = () => {
+        increaseCartQuanity(id);
+        forceUpdate({});
+    };
     
     return (
         <div>
@@ -22,7 +30,7 @@ export function StoreItem({id, name, price, imgUrl }: StoreItemProps) {
             </div>
            <div className="my-auto">
              {quantity === 0? (
-                <button onClick={() => increaseCartQuanity(id)} className="w-full bg-blue-500">+ Add To Cart</button>
+                <button onClick={handleAddToCart} className="w-full bg-blue-500">+ Add To Cart</button>
              ): <div className="flex items-center flex-col gap-3">
                     <div className="flex justify-center gap-2">
                         <button onClick={() => decreaseCartQuanity(id)} className="bg-blue-500 text-white px-2 "> - </button>
