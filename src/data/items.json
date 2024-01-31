@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 2000,
+      "imgUrl": "/imgs/Laptop.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Ear Pod",
+      "price": 800,
+      "imgUrl": "/imgs/Earpod.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Mobile",
+      "price": 1000,
+      "imgUrl": "/imgs/Mobile.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Watch",
+      "price": 140,
+      "imgUrl": "/imgs/Watch.jpeg"
+    }
+  ]
