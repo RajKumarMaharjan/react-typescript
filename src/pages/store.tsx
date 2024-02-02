@@ -1,5 +1,5 @@
 import storeItems from '../data/items.json'
-import { StoreItem } from '../component/cardItems';
+import { StoreItem } from '../component/storeItems';
 
 
 function Store() {

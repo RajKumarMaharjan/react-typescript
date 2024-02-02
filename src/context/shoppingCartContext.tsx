@@ -1,8 +1,9 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
-
+import useLocalStorage from '../hooks/useLocalStorage';
 
 type ShoppingCartProviderProps = {
     children: ReactNode
+
 }
 
 type CartItem = {
@@ -11,11 +12,15 @@ type CartItem = {
 }
 
 type ShoppingCartContext = {
-    getItemQuanity: (id: number) => number
-    increaseCartQuanity: (id: number) => void
-    decreaseCartQuanity: (id: number) => void
+    getItemQuantity: (id: number) => number
+    increaseCartQuantity: (id: number) => void
+    decreaseCartQuantity: (id: number) => void
     removeFromCart: (id: number) => void
-    getCartCount: () => number 
+    getCartCount: () => number
+    openCart: () => void
+    closeCart: () => void
+    cartQuantity: number
+    cartItems: CartItem[]
 }
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
@@ -25,14 +30,20 @@ export function UseShoppingChart() {
 }
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
-    const [cartItem, setCartItem] = useState<CartItem[]>([])
+    const [, setIsOpen] = useState(false)
+    const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", [])
 
-    function getItemQuanity(id: number) {
-        return cartItem.find(item => item.id === id)?.quantity || 0
+    const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+
+    const openCart = () => setIsOpen(true)
+    const closeCart = () => setIsOpen(true)
+
+    function getItemQuantity(id: number) {
+        return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-    function increaseCartQuanity(id: number) {
-        setCartItem(currItem => {
+    function increaseCartQuantity(id: number) {
+        setCartItems(currItem => {
             if (currItem.find(item => item.id === id) == null) {
                 return [...currItem, { id, quantity: 1 }]
             } else {
@@ -47,8 +58,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
     }
 
-    function decreaseCartQuanity(id: number) {
-        setCartItem(currItem => {
+    function decreaseCartQuantity(id: number) {
+        setCartItems(currItem => {
             if (currItem.find(item => item.id === id)?.quantity === 1) {
                 return currItem.filter(item => item.id !== id)
             } else {
@@ -63,18 +74,29 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
     }
 
+
     function removeFromCart(id: number) {
-        setCartItem(currItem => {
+        setCartItems(currItem => {
             return currItem.filter(item => item.id !== id)
         })
     }
 
     function getCartCount() {
-        return cartItem.reduce((total, item)=> total + item.quantity, 0)
+        return cartItems.reduce((total, item) => total + item.quantity, 0)
     }
 
     return (
-        <ShoppingCartContext.Provider value={{ getItemQuanity, increaseCartQuanity, decreaseCartQuanity, removeFromCart, getCartCount }}>
+        <ShoppingCartContext.Provider value={{
+            getItemQuantity,
+            increaseCartQuantity,
+            decreaseCartQuantity,
+            removeFromCart,
+            getCartCount,
+            cartItems,
+            cartQuantity,
+            openCart,
+            closeCart
+        }}>
             {children}
         </ShoppingCartContext.Provider>
     )
