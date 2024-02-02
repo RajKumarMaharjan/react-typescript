@@ -1,11 +1,11 @@
 import storeItems from '../data/items.json'
-import { StoreItem } from '../component/storeItems';
+import { StoreItem } from '../component/StoreItems';
 
 
 function Store() {
     return (
-        <div>
-            <h1 className='text-4xl font-medium text-center my-8 underline'>Store</h1>
+        <div className='bg-[#fbfafa]'>
+            <h1 className='text-4xl font-medium text-center py-10 underline'>Store</h1>
           <div className='flex flex-wrap gap-12 justify-center items-center'>
             {
                 storeItems.map(item => (
