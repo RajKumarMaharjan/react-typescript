@@ -34,7 +34,7 @@ const ShoppingCart = () => {
   }
   return (
     <div
-      className={`w-[400px] h-[100vh] bg-white px-4 ${isclosing ? 'slideOut' : ''}`}
+      className={`w-[400px] h-[100vh] bg-[#edf1f5] px-4 ${isclosing ? 'slideOut' : ''}`}
       onClick={handleCartClick}
     >
       <div className="flex justify-between py-8">

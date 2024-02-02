@@ -49,7 +49,7 @@ function NavBar() {
                     </div>
                 )}
                  <div className={`absolute -top-5 -right-10 ${showShoppingCart ? 'slideInOut' : ''}`}>
-                {showShoppingCart && <ShoppingCart />} 
+                {showShoppingCart && <ShoppingCart/>} 
                 </div>
             </button>
            </div>

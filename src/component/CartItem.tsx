@@ -14,18 +14,20 @@ function CartItem({ id, quantity }: CartItemProps) {
 
     return (
         <div>
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-between">
+            <div className="flex gap-3">
                 <img src={item.imgUrl} className="w-[100px] h-[75px] object-cover mb-4 rounded-lg"/>
-                <div className="grid grid-cols-2 gap-14">
-                    <div className="text-sm text-gray-600 font-thin tracking-tight ">
+               
+                    <div className="text-sm text-gray-600 font-thin tracking-tight text-start mt-8">
                         <div>
-                            {item.name} {" "} {quantity > 1 && (<span>{quantity}x</span>)}
+                            {item.name} {""} {quantity > 1 && (<span>{quantity}x</span>)}
                         </div>
                         <div>
                             {formatCurrency(item.price)}
                         </div>
                     </div>
-                    <div className="flex gap-2 justify-center">
+                </div>
+                <div className="flex gap-2 justify-center">
                         <div className="text-sm text-gray-800 mt-5">
                             {formatCurrency(item.price * quantity)}
                         </div>
@@ -33,7 +35,6 @@ function CartItem({ id, quantity }: CartItemProps) {
                             &times;
                         </button>
                     </div>
-                </div>
             </div>
         </div>
     )
