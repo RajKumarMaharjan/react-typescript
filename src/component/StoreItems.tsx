@@ -34,10 +34,6 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     return (
         <div className="border rounded-lg pb-4 bg-gray-50">
             <img src={imgUrl} className="h-[200px] w-[300px] object-cover rounded-t-lg mb-4" alt={`${name} Image`} />
-            <div className="flex justify-between item-center mt-2 px-2 mb-4">
-                <span className="text-md font-medium text-gray-600">{name}</span >
-                <span className="text-gray-500 text-md" >{formatCurrency(price)}</span >
-            </div>
             <div className="my-auto">
                 {quantity === 0 ? (
                     <button onClick={handleAddToCart} className="w-full bg-blue-500 py-2 text-[#efefef] text-lg hover:opacity-80 duration-300">+ Add To Cart</button>
@@ -52,6 +48,10 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                     </div>
                     <button onClick={() => removeFromCart(id)} className="bg-red-400 text-white text-lg py-1 px-4 rounded-md hover:opacity-80 duration-300">Remove </button>
                 </div>}
+            </div>
+            <div className="flex justify-between item-center mt-2 px-2 mb-4 pt-2">
+                <span className="text-md font-semibold text-gray-600">{name}</span >
+                <span className="text-gray-500 text-md" >{formatCurrency(price)}</span >
             </div>
         </div>
     )

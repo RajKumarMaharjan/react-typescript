@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "password": "admin123",
+      "email": "admin@gmail.com",
+      "number": "9843696298",
+      "country": "Nepal",
+      "address": "lalitpur",
+      "gender": "male"
+    }
+  ]
+}

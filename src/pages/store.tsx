@@ -1,23 +1,14 @@
-import storeItems from '../data/items.json'
-import { StoreItem } from '../component/StoreItems';
-
+import StoreGrid from "../component/Layout/StoreGrid";
 
 function Store() {
-    return (
-        <div className='bg-[#fbfafa]'>
-            <h1 className='text-4xl font-medium text-center py-10 underline'>Store</h1>
-          <div className='flex flex-wrap gap-12 justify-center items-center'>
-            {
-                storeItems.map(item => (
-                   <div key={item.id}>
-                    <StoreItem {...item} /> 
-                   </div>
-                ))
-            }
-          </div>
-            
-        </div>
-    )
+  return (
+    <div className="bg-[#fbfafa] py-16">
+      <h1 className="text-4xl font-medium text-center underline pb-16">
+        Products
+      </h1>
+     <StoreGrid/>
+    </div>
+  );
 }
 
 export default Store;

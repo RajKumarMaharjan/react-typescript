@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
 import { useState , useEffect} from "react";
-import '../css/Navbar.css'
+import '../css/index.css'
 
 const ShoppingCart = () => {
   const { cartItems } = UseShoppingChart();

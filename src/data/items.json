@@ -3,24 +3,36 @@
       "id": 1,
       "name": "Laptop",
       "price": 2000,
-      "imgUrl": "/imgs/Laptop.jpeg"
+      "imgUrl": "src/assets/images/Laptop.jpeg"
     },
     {
       "id": 2,
       "name": "Ear Pod",
       "price": 800,
-      "imgUrl": "/imgs/Earpod.jpeg"
+      "imgUrl": "src/assets/images/Earpod.jpeg"
     },
     {
       "id": 3,
       "name": "Mobile",
       "price": 1000,
-      "imgUrl": "/imgs/Mobile.jpeg"
+      "imgUrl": "src/assets/images/Mobile.jpeg"
     },
     {
       "id": 4,
-      "name": "Watch",
-      "price": 140,
-      "imgUrl": "/imgs/Watch.jpeg"
+      "name": "Drone V1",
+      "price": 640,
+      "imgUrl": "src/assets/images/Drone1.png"
+    },
+    {
+      "id": 5,
+      "name": "Drone V2",
+      "price": 940,
+      "imgUrl": "src/assets/images/Drone2.png"
+    },
+    {
+      "id": 6,
+      "name": "Smart Watch",
+      "price": 240,
+      "imgUrl": "src/assets/images/Watch.jpeg"
     }
   ]

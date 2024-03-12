@@ -1,0 +1,108 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.initial-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideText {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+    visibility: visible;
+  }
+}
+@keyframes feature {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-300%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bannerImg {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.animationSlideInOut {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.animationSlideOut {
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+.animationSlideText {
+  animation: slideText 1s ease-in forwards;
+}
+
+.animationBannerImg {
+  animation: bannerImg 1s ease-in forwards;
+}
+
+.animationFeature {
+  animation: feature 1s forwards;
+}
+
+.headBanner {
+  position: relative;
+ overflow: hidden;
+}
+
+.headBanner:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.headBanner:before {
+  position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    right: -100px;
+    top: 0;
+    background: #3e51eb;
+    transform: skew(-15deg, 0deg);
+    z-index:-1;
+}
+
