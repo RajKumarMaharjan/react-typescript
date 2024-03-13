@@ -1,6 +1,6 @@
-import { UseShoppingChart } from "../context/shoppingCartContext"
-import { formatCurrency } from "../utilities/formatCurrency"
-import storeItems from "../data/items.json"
+import { UseShoppingChart } from "../../context/shoppingCartContext"
+import { formatCurrency } from "../../utilities/formatCurrency"
+import storeItems from "../../data/items.json"
 
 type CartItemProps = {
     id: number

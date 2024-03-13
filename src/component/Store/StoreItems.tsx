@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react"
-import { UseShoppingChart } from "../context/shoppingCartContext"
-import { formatCurrency } from "../utilities/formatCurrency"
+import { UseShoppingChart } from "../../context/shoppingCartContext"
+import { formatCurrency } from "../../utilities/formatCurrency"
 
 
 type StoreItemProps = {

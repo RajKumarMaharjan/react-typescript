@@ -52,7 +52,7 @@ function Login() {
   }
 
   return (
-    <div className="w-1/2 grid mx-auto border rounded-lg py-4 px-8 my-24">
+    <div className="w-1/2  grid mx-auto border border-[#28ABD8] rounded-lg py-4 px-8 my-24">
       <form onSubmit={ProceedLogin}>
         <h2 className="text-3xl text-center font-bold py-8 underline">
           User Login

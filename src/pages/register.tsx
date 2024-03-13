@@ -96,7 +96,7 @@ function Register() {
   };
 
   return (
-    <div className="border rounded-md flex justify-center items-center w-1/2 mx-auto my-12">
+    <div className="border border-[#28ABD8] rounded-md flex justify-center items-center w-1/2 mx-auto my-12">
       <form className="w-full p-4" onSubmit={handleSubmit}>
         <h2 className="text-3xl text-center font-bold py-8 underline">
           User Register
@@ -104,7 +104,7 @@ function Register() {
         <div>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 Full Name
               </label>
               <input
@@ -116,7 +116,7 @@ function Register() {
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 User Name
               </label>
               <input
@@ -127,7 +127,7 @@ function Register() {
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 Email 
               </label>
               <input
@@ -138,7 +138,7 @@ function Register() {
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 Password
               </label>
               <input
@@ -150,7 +150,7 @@ function Register() {
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 Phone Number
               </label>
               <input
@@ -160,7 +160,7 @@ function Register() {
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>
+              <label className="font-semibold">
                 {" "}
                 Country
               </label>
@@ -178,7 +178,7 @@ function Register() {
             </div>
           </div>
           <div>
-            <label>
+            <label className="font-semibold">
               Address
             </label>
             <textarea
@@ -189,7 +189,7 @@ function Register() {
           </div>
         </div>
         <div className="">
-          <label>Gender</label>
+          <label className="font-semibold">Gender</label>
           <div className="flex gap-4">
             <div>
               <input

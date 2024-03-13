@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import { FaShoppingCart, FaRegUser } from "react-icons/fa";
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '../assets/images/logo.png'
-import { UseShoppingChart } from "../context/shoppingCartContext";
-import ShoppingCart from './ShoppingCart';
-import '../css/index.css';
+import Logo from '../../assets/images/logo.png'
+import { UseShoppingChart } from "../../context/shoppingCartContext";
+import ShoppingCart from '../CartItem/ShoppingCart';
+import '../../css/index.css';
 
 function NavBar() {
     const { cartQuantity } = UseShoppingChart();

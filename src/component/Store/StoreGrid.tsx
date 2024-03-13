@@ -1,5 +1,5 @@
 import storeItems from '../../data/items.json';
-import { StoreItem } from '../../component/StoreItems';
+import { StoreItem } from './StoreItems';
 
 function StoreGrid() {
     return (

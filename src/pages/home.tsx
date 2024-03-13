@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import DroneImg from '../assets/images/Drone1.png';
-import StoreGrid from '../component/Layout/StoreGrid';
+import StoreGrid from '../component/Store/StoreGrid';
 import { TiLocationOutline } from "react-icons/ti";
 import { AiOutlineSafety } from "react-icons/ai";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import DroneImg2 from "../assets/images/Drone2.png"
+import DroneImg2 from "../assets/images/Drone2.png";
+import Layout from '../component/Layout/layout';
 import '../css/index.css';
 
 
@@ -28,7 +29,8 @@ const Features = [
 
 function Home() {
   return (
-    <div>
+   <Layout>
+     <div>
       <div className='headBanner h-[100vh] grid md:grid-cols-2 justify-evenly items-center'>
         <div className='pl-24 text-[#fcf5f5]'>
           <h2 className='uppercase w-5/6 text-[52px] font-[700] leading-[52px] mb-[17px] animationSlideText'>
@@ -80,6 +82,7 @@ function Home() {
         <StoreGrid />
       </div>
     </div>
+   </Layout>
   )
 }
 
